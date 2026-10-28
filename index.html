@@ -1,8 +1,128 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dalil Visa — Votre dossier, plus clair</title><link rel="icon" href="assets/dalil-icon.svg"><link rel="stylesheet" href="styles.css"></head><body>
-<header><a class="brand" href="#"><img src="assets/dalil-icon.svg"><span>Dalil <b>Visa</b></span></a><nav><a href="#how">Comment ça marche</a><a href="#journey">Mon parcours</a><a href="#faq">FAQ</a></nav><a class="cta" href="#journey">Commencer ↗</a></header>
-<main><section class="hero"><div><small>● L’ACCOMPAGNEMENT VISA, EN PLUS CLAIR</small><h1>Votre dossier visa.<br><em>Plus clair, dès le départ.</em></h1><p>Comprenez les étapes, identifiez les documents à préparer et retrouvez les liens officiels utiles, sans vous perdre dans les démarches.</p><a class="button" href="#journey">Trouver ma démarche →</a><p class="trust">✓ Explications simples · Sources officielles · Parcours guidé</p></div><div class="visual"><div class="paper"><div class="pill">MON DOSSIER · À PRÉPARER</div><img src="assets/dalil-icon.svg"><hr><p>✓ &nbsp; Identifier le type de visa</p><p>□ &nbsp; Vérifier les justificatifs</p><p>□ &nbsp; Consulter la source officielle</p></div><div class="note">✦ &nbsp; Un pas après l’autre</div></div></section>
-<section id="how"><small>COMMENT ÇA MARCHE</small><h2>Moins de confusion.<br><em>Plus de visibilité.</em></h2><div class="cards"><article><b>01</b><h3>Décrivez votre projet</h3><p>Répondez à quelques questions pour orienter votre recherche vers la bonne démarche.</p></article><article><b>02</b><h3>Préparez votre checklist</h3><p>Visualisez les catégories de documents à vérifier selon votre situation.</p></article><article><b>03</b><h3>Vérifiez les sources</h3><p>Accédez aux sites officiels pour confirmer les exigences à jour.</p></article></div></section>
-<section id="journey" class="journey"><div><small>VOTRE PARCOURS</small><h2>Commençons par<br><em>votre situation.</em></h2><p>Répondez aux questions pour obtenir une première orientation. Les exigences définitives dépendent de votre situation.</p><div class="notice">ⓘ Dalil Visa est un service indépendant. Nous ne sommes ni un consulat ni un centre de dépôt et ne garantissons aucune décision de visa.</div></div><div class="quiz"><div class="bar"><i id="bar"></i></div><small id="counter">QUESTION 1 SUR 3</small><h3 id="qtitle">Quel est le motif principal de votre voyage ?</h3><div id="options"></div><div class="actions"><button id="back" disabled>← Retour</button><button class="button" id="next">Continuer →</button></div><div id="result"></div></div></section>
-<section id="faq"><small>QUESTIONS FRÉQUENTES</small><h2>Des réponses <em>sans détour.</em></h2><details><summary>Dalil Visa délivre-t-il des visas ?</summary><p>Non. La décision appartient exclusivement aux autorités compétentes.</p></details><details><summary>La checklist garantit-elle une acceptation ?</summary><p>Non. Vérifiez toujours les consignes officielles adaptées à votre demande.</p></details></section></main>
-<footer><a class="brand" href="#"><img src="assets/dalil-icon.svg"><span>Dalil <b>Visa</b></span></a><p>Votre dossier visa, plus clair dès le départ.</p><a href="https://www.france-visas.gouv.fr/tunisie">France-Visas Tunisie ↗</a> · <a href="https://visas-fr.tlscontact.com/fr-fr/country/tn">TLScontact Tunisie ↗</a><small>Version de démonstration en cours de développement.</small></footer>
-<button id="chatOpen" class="chat-open">✦ &nbsp; Une question ?</button><aside id="chat" hidden><div class="chathead">✦ Assistant Dalil <button id="chatClose">×</button></div><div id="messages"><p class="bot">Bonjour ! Je peux vous orienter dans les démarches visa. Par quoi souhaitez-vous commencer ?</p></div><div class="chips"><button>Visiter la France</button><button>Étudier en France</button><button>Sources officielles</button></div><form id="chatform"><input id="chatinput" placeholder="Écrivez votre question…"><button>➤</button></form><small>Assistant de démonstration : réponses générales, non connecté à une IA. Vérifiez les sources officielles.</small></aside><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17365b">
+  <meta name="description" content="Dalil Visa aide les voyageurs depuis la Tunisie à comprendre les démarches visa France, préparer leurs questions et retrouver les sources officielles.">
+  <title>Dalil Visa — Votre démarche, plus claire</title>
+  <link rel="icon" href="assets/dalil-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Dalil Visa, accueil">
+      <img src="assets/dalil-icon.svg" alt="">
+      <span>Dalil <b>Visa</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Navigation principale">
+      <a href="#how">Comment ça marche</a>
+      <a href="#journey">Mon parcours</a>
+      <a href="#assistant">Assistant</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="header-cta" href="#journey">Commencer <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> LE GUIDE INDÉPENDANT DES DÉMARCHES VISA</div>
+        <h1>Votre démarche visa.<br><em>Plus claire dès le départ.</em></h1>
+        <p class="hero-text">Comprenez les prochaines étapes, identifiez les points à vérifier et retrouvez les liens officiels utiles pour votre projet depuis la Tunisie.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#journey">Construire mon orientation <span>→</span></a>
+          <a class="text-link" href="#assistant">Poser une question <span>↗</span></a>
+        </div>
+        <div class="trust-row">
+          <span>✓ Explications simples</span><span>✓ Liens officiels</span><span>✓ Parcours guidé</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Aperçu illustratif d'un dossier à préparer">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="document-card">
+          <div class="doc-top"><span class="doc-icon">✦</span><span class="doc-status">VOTRE PARCOURS</span><span class="doc-dots">•••</span></div>
+          <h2>Un dossier plus clair,<br>étape par étape.</h2>
+          <div class="progress-label"><span>Premiers repères</span><b>01 / 03</b></div>
+          <div class="mini-progress"><i></i></div>
+          <div class="doc-task"><span class="task-check">✓</span><span><b>Identifier le motif</b><small>Tourisme, visite, études…</small></span></div>
+          <div class="doc-task"><span class="task-empty"></span><span><b>Vérifier les justificatifs</b><small>Selon votre situation</small></span></div>
+          <div class="doc-task"><span class="task-empty"></span><span><b>Consulter les sources</b><small>Avant toute démarche</small></span></div>
+        </div>
+        <div class="floating-note"><span>✦</span><div><b>Un pas après l’autre</b><small>Sans promesse irréaliste</small></div></div>
+      </div>
+    </section>
+
+    <section class="stats-strip section-wrap" aria-label="Principes de Dalil Visa">
+      <div><span class="stat-icon">01</span><p><b>Comprendre</b><small>Les étapes de votre projet</small></p></div>
+      <div><span class="stat-icon">02</span><p><b>Préparer</b><small>Les points à vérifier</small></p></div>
+      <div><span class="stat-icon">03</span><p><b>Confirmer</b><small>Auprès des sources officielles</small></p></div>
+    </section>
+
+    <section id="how" class="section-wrap section-space">
+      <div class="section-heading">
+        <div><div class="eyebrow">SIMPLE ET PROGRESSIF</div><h2>Moins de confusion.<br><em>Plus de visibilité.</em></h2></div>
+        <p>Pas besoin de tout connaître dès le départ. Commencez par décrire votre projet, puis vérifiez les informations qui s'appliquent à votre situation.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">01</span><div class="feature-icon">⌕</div><h3>Décrivez votre projet</h3><p>Précisez le motif, la destination et la durée envisagée pour obtenir une première orientation.</p></article>
+        <article class="feature-card featured"><span class="feature-number">02</span><div class="feature-icon">☷</div><h3>Repérez les points à vérifier</h3><p>Organisez les questions et les catégories de justificatifs à confirmer pour votre dossier.</p></article>
+        <article class="feature-card"><span class="feature-number">03</span><div class="feature-icon">↗</div><h3>Confirmez officiellement</h3><p>Accédez aux ressources officielles pour vérifier les règles et les modalités de dépôt à jour.</p></article>
+      </div>
+    </section>
+
+    <section id="journey" class="journey-section">
+      <div class="section-wrap journey-layout">
+        <div class="journey-copy">
+          <div class="eyebrow">VOTRE PARCOURS</div>
+          <h2>Commençons par<br><em>votre situation.</em></h2>
+          <p>Répondez à trois questions rapides. Dalil Visa vous indiquera par où commencer, sans remplacer la simulation officielle.</p>
+          <div class="notice"><span>ⓘ</span><p><b>À savoir</b><br>Dalil Visa est un service indépendant. Nous ne délivrons pas de visas, ne décidons pas des rendez-vous et ne garantissons aucune décision.</p></div>
+          <a class="official-inline" href="https://www.france-visas.gouv.fr/tunisie" target="_blank" rel="noopener noreferrer">Ouvrir France-Visas Tunisie ↗</a>
+        </div>
+        <div class="quiz-card">
+          <div class="quiz-top"><span>ORIENTATION PERSONNALISÉE</span><span class="quiz-badge">3 questions</span></div>
+          <div class="quiz-progress"><i id="bar"></i></div>
+          <small id="counter" class="counter">QUESTION 1 SUR 3</small>
+          <h3 id="qtitle">Quel est le motif principal de votre voyage ?</h3>
+          <div id="options" class="options"></div>
+          <div class="quiz-actions"><button id="back" class="btn btn-light" disabled>← Retour</button><button id="next" class="btn btn-primary">Continuer →</button></div>
+          <div id="result" class="result" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="assistant" class="section-wrap assistant-section">
+      <div class="section-heading">
+        <div><div class="eyebrow">ASSISTANT D'ORIENTATION</div><h2>Une question ?<br><em>Commençons ici.</em></h2></div>
+        <p>Posez une question sur le tourisme, les visites, les études, le travail ou les étapes de dépôt. L'assistant de cette version utilise des réponses préprogrammées.</p>
+      </div>
+      <div class="assistant-demo">
+        <div class="assistant-intro"><div class="assistant-avatar">✦</div><div><b>Assistant Dalil</b><small>Orientation générale · Version de démonstration</small></div><span class="online-dot"></span></div>
+        <div id="messages" class="messages" aria-live="polite"><div class="message bot">Bonjour ! Je peux vous orienter pour un projet de visa France depuis la Tunisie. Votre projet concerne le tourisme, une visite familiale, les études ou le travail ?</div></div>
+        <div class="suggestions chips"><button type="button">Documents pour tourisme</button><button type="button">Visa études</button><button type="button">Rendez-vous TLScontact</button><button type="button">Frais de visa</button></div>
+        <form id="chatform" class="chat-form"><label class="sr-only" for="chatinput">Votre question</label><input id="chatinput" autocomplete="off" placeholder="Écrivez votre question…" required><button type="submit" aria-label="Envoyer la question">➤</button></form>
+        <p class="assistant-footnote">Cette version n'utilise pas encore d'IA connectée et ne vérifie pas les disponibilités en temps réel. Ne saisissez pas de données personnelles ou de documents confidentiels.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="section-wrap faq-section">
+      <div class="section-heading"><div><div class="eyebrow">QUESTIONS FRÉQUENTES</div><h2>Des réponses <em>sans détour.</em></h2></div><p>Quelques repères importants avant de commencer vos démarches.</p></div>
+      <div class="faq-list">
+        <details><summary>Dalil Visa délivre-t-il des visas ?</summary><p>Non. Seules les autorités compétentes prennent la décision. Dalil Visa est un service d'orientation indépendant.</p></details>
+        <details><summary>La checklist garantit-elle l'acceptation ?</summary><p>Non. Une checklist indicative ne remplace pas la liste personnalisée produite par France-Visas et ne garantit pas l'acceptation.</p></details>
+        <details><summary>Où vérifier les documents exacts ?</summary><p>Utilisez la procédure officielle France-Visas en indiquant votre situation. Les documents dépendent notamment du motif, de la durée et de votre situation personnelle.</p></details>
+        <details><summary>Où trouver les informations de dépôt en Tunisie ?</summary><p>Consultez le site officiel de TLScontact Tunisie pour les modalités de dépôt et les instructions applicables.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main"><a class="brand brand-footer" href="#top"><img src="assets/dalil-icon.svg" alt=""><span>Dalil <b>Visa</b></span></a><p>Votre démarche visa, plus claire dès le départ.</p><div class="footer-links"><a href="https://www.france-visas.gouv.fr/tunisie" target="_blank" rel="noopener noreferrer">France-Visas Tunisie ↗</a><a href="https://visas-fr.tlscontact.com/fr-fr/country/tn" target="_blank" rel="noopener noreferrer">TLScontact Tunisie ↗</a></div></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Dalil Visa · Prototype indépendant</span><span>Les règles peuvent évoluer : vérifiez toujours les sources officielles.</span></div>
+  </footer>
+  <button id="chatOpen" class="floating-chat" type="button">✦ Une question ?</button>
+  <script src="script.js"></script>
+</body>
+</html>
